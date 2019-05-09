@@ -286,7 +286,16 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 function longer (arr1, arr2) {
-  
+  for(var i = 0; i < num1; i++){
+    arr1.push(i);
+  }
+  for(var i = 0; i < num2; i++){
+    arr2.push(i);
+  }
+  if (arr1.length > arr2.length) {
+    return arr1
+  }
+  else {return arr2}
 }
 
 
@@ -299,7 +308,39 @@ function longer (arr1, arr2) {
 */
 
 //Code Here
-
+function both (arr1, arr2) {
+  var dups = []
+  var bigArr;
+  var smallArr;
+  // for(var i = 0; i < num1; i++){
+  //   arr1.push(i);
+  // }
+  // for(var i = 0; i < num2; i++){
+  //   arr2.push(i);
+  // }
+  // console.log(arr1)
+  // console.log(arr2)
+  if (arr1.length > arr2.length) {
+    bigArr = arr1
+    smallArr = arr2
+  }
+  else if (arr2.length > arr1.length)
+  {
+    bigArr = arr2
+    smallArr = arr1
+  }
+  else {bigArr = arr2
+    smallArr = arr1}
+  for (i = 0; i < bigArr.length; i++) {
+    for (j = 0; j < smallArr.length; j++) {
+      if (bigArr[i] === smallArr[j]) {
+        dups.push(bigArr[i])
+      }
+    }
+  }
+  console.log(dups)
+  return dups
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -339,6 +380,11 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(joe)
+devMountainEmployees.push(ryan)
+devMountainEmployees.push(colt)
+devMountainEmployees.push(cahlan)
+
 
 
 
@@ -348,9 +394,15 @@ var colt = {
 */
 
 //Code Here
-
-
-
+function dropum () {
+for (i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i].name === "Cahlan") {
+  devMountainEmployees.splice(i,1)
+  }
+}
+return devMountainEmployees
+}
+dropum()
 ////////// PROBLEM 13 //////////
 
 
@@ -360,7 +412,7 @@ var colt = {
 */
 
 //Code Here
-
+var users = []
 
 
 /*
@@ -379,8 +431,22 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Bob McIver',
+  email: 'bob.mciver@devmounta.in',
+  password: 'hunter1',
+  username: 'ihazcode2'
+};
 
-
+var user3 = {
+  name: 'Carl McIver',
+  email: 'Carl.mciver@devmounta.in',
+  password: 'hunter0',
+  username: 'ihazcode3'
+};
+users.push(user1)
+users.push(user2)
+users.push(user3)
 
 /*
   Now you have a very common data structure. 
